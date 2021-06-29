@@ -47,5 +47,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<!-- this is needed or IntelliJ gives junit.jar or junit-platform-launcher:1.7.2 not found errors -->
+			<groupId>org.junit.platform</groupId>
+			<artifactId>junit-platform-launcher</artifactId>
+			<scope>test</scope>
+			<version>1.7.2</version>
+		</dependency>
 	</dependencies>
+
+
 </project>

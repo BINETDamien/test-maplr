@@ -21,6 +21,6 @@ public class PlayerController {
     @PutMapping("/captain/{id}")
     public ResponseEntity<Player> setCapitaine(@PathVariable("id") Integer id) {
         Player player = this.playerService.setCapitaine(id);
-        return new ResponseEntity<>(player, HttpStatus.ACCEPTED);
+        return new ResponseEntity<>(player, HttpStatus.OK);
     }
 }

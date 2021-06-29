@@ -19,7 +19,7 @@ public class PlayerServiceImpl implements PlayerService {
     public Player setCapitaine(Integer idPlayer) {
         Optional<Player> optionalPlayer = this.playerRepository.findById(idPlayer);
         if (optionalPlayer.isEmpty()) {
-            throw new Error("le player avec l'id " + idPlayer + " n'existe pas");
+            throw new RuntimeException("le player avec l'id " + idPlayer + " n'existe pas");
         }
         return this.playerRepository.save(optionalPlayer.get().setCaptain(true));
     }
