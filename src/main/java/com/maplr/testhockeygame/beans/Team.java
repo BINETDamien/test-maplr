@@ -4,7 +4,7 @@ package com.maplr.testhockeygame.beans;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 @Entity
@@ -13,7 +13,7 @@ public class Team {
     private Long id;
     private String coach;
     private Integer year;
-    @ManyToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Player> players;
 
     public Long getId() {

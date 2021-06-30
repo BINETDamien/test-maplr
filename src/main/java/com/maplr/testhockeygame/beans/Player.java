@@ -1,5 +1,7 @@
 package com.maplr.testhockeygame.beans;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -9,6 +11,8 @@ public class Player {
     private Integer number;
     private String name;
     private String lastname;
+    private String position;
+    @JsonInclude(JsonInclude.Include.NON_DEFAULT)
     private boolean isCaptain;
 
     public Integer getNumber() {
@@ -38,12 +42,21 @@ public class Player {
         return this;
     }
 
-    public boolean isCaptain() {
+    public boolean isIsCaptain() {
         return isCaptain;
     }
 
-    public Player setCaptain(boolean captain) {
-        isCaptain = captain;
+    public Player setIsCaptain(boolean captain) {
+        this.isCaptain = captain;
+        return this;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public Player setPosition(String position) {
+        this.position = position;
         return this;
     }
 }

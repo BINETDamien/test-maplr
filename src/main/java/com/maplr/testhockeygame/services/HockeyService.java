@@ -3,10 +3,12 @@ package com.maplr.testhockeygame.services;
 import com.maplr.testhockeygame.beans.Player;
 import com.maplr.testhockeygame.beans.Team;
 
-public interface TeamService {
+public interface HockeyService {
     Team getTeamByYear(Integer year);
 
     Team addPlayerForYear(Integer year, Player player);
 
-    void createTeam(Team team);
+    Team createTeam(Team team);
+
+    Player setCapitaine(Integer idPlayer);
 }
